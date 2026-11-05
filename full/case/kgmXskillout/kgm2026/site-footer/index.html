@@ -1,0 +1,1049 @@
+<!doctype html><html lang="ru"><head><meta name="robots" content="noindex,nofollow"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>
+    @font-face {
+      font-display: swap;
+      font-family: 'Alumni Sans';
+      font-weight: 400;
+      src: url('./seo-assets/95b2f2b636941650c0e4.woff') format('woff');
+    }
+    @font-face {
+      font-display: swap;
+      font-family: 'Bella Script CYR';
+      font-weight: 400;
+      src: url('./seo-assets/e4b12abcdb68e929bc5b.woff') format('woff');
+    }
+    @font-face {
+      font-display: swap;
+      font-family: 'Belozersk';
+      font-weight: 400;
+      src: url('./seo-assets/f9d3b7fd0845e3368933.woff') format('woff');
+    }
+    @font-face {
+      font-display: swap;
+      font-family: 'Cera Pro';
+      font-weight: 700;
+      src: url('./seo-assets/f8084cbc8c60eb4481e8.woff') format('woff');
+    }
+    @font-face {
+      font-display: swap;
+      font-family: 'Cera Pro';
+      font-weight: 300;
+      src: url('./seo-assets/e4d81f683a7a56b06e94.woff') format('woff');
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold: #C9A84C;
+      --gold-30: rgba(201,168,76,0.3);
+      --black: #0A0A0A;
+      --dark-green: #0A0F0B;
+      --white: #FFFFFF;
+      --white-60: rgba(255,255,255,0.6);
+      --white-50: rgba(255,255,255,0.5);
+      --white-20: rgba(255,255,255,0.2);
+      --white-10: rgba(255,255,255,0.1);
+      --white-5: rgba(255,255,255,0.05);
+      --dawn-pink: #F5F0E8;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--dark-green);
+      color: var(--white);
+      font-family: 'Cera Pro', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* HEADER */
+    header {
+      position: fixed; top:0; left:0; right:0; z-index:100;
+      display:flex; justify-content:space-between; align-items:center;
+      padding:14px 36px;
+      background:rgba(10,10,10,0.85);
+      backdrop-filter:blur(12px);
+      -webkit-backdrop-filter:blur(12px);
+      border-bottom:0.75px solid rgba(255,255,255,0.06);
+    }
+    .header-logo { display:flex; align-items:center; text-decoration:none; flex-shrink:0; }
+    .header-logo svg, .header-logo img { width:36px; height:36px; }
+    .header-nav {
+      display:flex; align-items:center; gap:4px; flex-wrap:nowrap;
+    }
+    .header-nav a {
+      font-family:'Cera Pro',sans-serif; font-weight:400; font-size:11px;
+      letter-spacing:1.2px; text-transform:uppercase;
+      color:rgba(255,255,255,0.75); text-decoration:none;
+      padding:6px 10px; transition:color .25s; white-space:nowrap;
+    }
+    .header-nav a:hover { color:#fff; }
+    .header-nav a.nav-cta {
+      color:#C9A84C; font-weight:700;
+    }
+    .header-nav a.nav-cta:hover { color:#e0c070; }
+    /* Burger for mobile */
+    .header-burger {
+      display:none; flex-direction:column; gap:5px; cursor:pointer;
+      background:none; border:none; padding:4px;
+    }
+    .header-burger span {
+      display:block; width:24px; height:1.5px; background:#fff; transition:.3s;
+    }
+    .header-mobile-nav {
+      display:none; position:fixed; inset:0; top:64px; z-index:99;
+      background:rgba(10,10,10,0.97); backdrop-filter:blur(16px);
+      flex-direction:column; align-items:center; justify-content:center; gap:28px;
+    }
+    .header-mobile-nav.open { display:flex; }
+    .header-mobile-nav a {
+      font-family:'Cera Pro',sans-serif; font-weight:400; font-size:15px;
+      letter-spacing:2px; text-transform:uppercase;
+      color:rgba(255,255,255,0.8); text-decoration:none;
+    }
+    .header-mobile-nav a:hover { color:#fff; }
+    .header-mobile-nav a.nav-cta { color:#C9A84C; font-weight:700; }
+    @media(max-width:1100px){
+      .header-nav { display:none; }
+      .header-burger { display:flex; }
+    }
+
+    /* HERO */
+    #hero {
+      position:relative; width:100%; height:100vh; min-height:700px;
+      background:var(--black); display:flex; flex-direction:column;
+      justify-content:center; align-items:center; overflow:hidden;
+    }
+    .hero-video {
+      position:absolute; inset:0; width:100%; height:100%;
+      object-fit:cover; z-index:0;
+    }
+    .hero-bg {
+      position:absolute; inset:0;
+      background: linear-gradient(180deg,rgba(10,10,10,.4) 0%,rgba(10,10,10,0) 50%,#0A0A0A 100%),rgba(10,10,10,.7);
+      mix-blend-mode:multiply; z-index:1;
+    }
+    .hero-content {
+      position:relative; z-index:2;
+      display:flex; flex-direction:column; align-items:center;
+      text-align:center; max-width:768px; padding:0 12px;
+    }
+    .hero-logo-mark { margin-bottom:28px; filter:drop-shadow(0 18px 18px rgba(0,0,0,.4)); }
+    .hero-logo-mark svg, .hero-logo-mark img { width:200px; height:200px; }
+    .hero-title {
+      font-family:'Alumni Sans',sans-serif; font-weight:700;
+      font-size:clamp(36px,5vw,60px); line-height:1.0;
+      letter-spacing:5px; text-transform:uppercase;
+      color:var(--white); margin-bottom:16px; max-width:670px;
+    }
+    .hero-tagline {
+      font-family:'Bella Script CYR',cursive; font-size:216px;
+      font-weight:400; line-height:1.1; color:var(--gold);
+      letter-spacing:1px; margin-bottom:8px;
+    }
+    .hero-scroll {
+      position:absolute; bottom:36px; left:50%; transform:translateX(-50%);
+      display:flex; flex-direction:column; align-items:center; gap:12px; z-index:3;
+    }
+    .hero-scroll span {
+      font-family:'Cera Pro',sans-serif; font-size:7px;
+      letter-spacing:2px; text-transform:uppercase; color:var(--white-50);
+    }
+    .hero-scroll-line {
+      width:1px; height:48px; background:var(--white-20);
+      animation:scrollPulse 2s ease-in-out infinite;
+    }
+    @keyframes scrollPulse {
+      0%,100% { transform:scaleY(1); opacity:.5; }
+      50% { transform:scaleY(.6); opacity:1; }
+    }
+
+    /* SECTION BASE */
+    section { width:100%; border-top:.75px solid var(--white-5); scroll-margin-top:88px; }
+    .container { max-width:1156px; margin:0 auto; padding:0 24px; }
+    .section-title {
+      font-family:'Alumni Sans',sans-serif; font-weight:400;
+      font-size:clamp(36px,4vw,60px); line-height:1.08;
+      letter-spacing:6px; text-transform:uppercase;
+    }
+
+    /* VALUES */
+    #values { padding:96px 0 54px; background:var(--dark-green); }
+    #values .section-title { color:var(--dawn-pink); max-width:1156px; margin-bottom:44px; }
+    .values-grid {
+      display:grid; grid-template-columns:repeat(4,1fr);
+      border-top:.9px solid var(--white-10); padding-top:58px;
+    }
+    .value-item { padding-right:32px; }
+    .value-numeral {
+      font-family:'Cinzel',serif; font-weight:400; font-size:28px; line-height:1;
+      color:var(--gold); margin-bottom:20px; display:block;
+      -webkit-text-stroke:0; -webkit-font-smoothing:antialiased;
+    }
+    .value-label {
+      font-family:'Cera Pro',sans-serif; font-weight:700; font-size:11px;
+      letter-spacing:3px; text-transform:uppercase; color:var(--white);
+      margin-bottom:14px; display:block;
+    }
+    .value-desc {
+      font-family:'Cera Pro',sans-serif; font-weight:300; font-size:15px;
+      line-height:1.75; color:var(--white-60); max-width:240px;
+    }
+
+    /* SERVICES */
+    #services { padding:60px 0; background:var(--black); }
+    .services-header { display:flex; align-items:center; gap:28px; margin-bottom:44px; }
+    .services-header .section-title { color:var(--white); white-space:nowrap; }
+    .services-divider { flex:1; height:.9px; background:var(--gold-30); }
+    .services-grid {
+      display:grid; grid-template-columns:repeat(2,1fr);
+      border-top:.9px solid var(--white-10);
+      border-left:.9px solid var(--white-10);
+    }
+    .service-card {
+      padding:36px 40px; border-right:.9px solid var(--white-10);
+      border-bottom:.9px solid var(--white-10);
+      transition:background .4s; cursor:pointer;
+      position:relative;
+    }
+    .service-card:hover { background:rgba(255,255,255,0.04); }
+    .service-card:hover .service-icon svg *[stroke]:not([stroke='none']) { stroke:#8A1F1F; }
+    .service-card:hover .service-icon svg *[fill]:not([fill='none']) { fill:#8A1F1F; }
+    .service-card:hover .service-icon { opacity:1; }
+    .service-icon { width:32px; height:32px; margin-bottom:20px; opacity:.55; }
+    .service-icon svg { width:100%; height:100%; }
+    .service-icon svg * { transition:stroke .3s, fill .3s; }
+    .service-card-top { display:flex; align-items:flex-start; justify-content:space-between; }
+    .service-name {
+      font-family:'Alumni Sans',sans-serif; font-weight:400; font-size:22px;
+      line-height:1.3; color:var(--white); margin-bottom:0; flex:1;
+    }
+    .service-toggle {
+      width:24px; height:24px; flex-shrink:0; margin-left:16px; margin-top:2px;
+      color:rgba(255,255,255,0.3); transition:transform .3s, color .3s;
+      font-size:20px; line-height:1; user-select:none;
+    }
+    .service-card.open .service-toggle { transform:rotate(45deg); color:#C9A84C; }
+    .service-desc {
+      font-family:'Cera Pro',sans-serif; font-weight:300; font-size:14px;
+      line-height:1.7; color:var(--white-50);
+      max-height:0; overflow:hidden; transition:max-height .4s ease, opacity .4s ease, margin .4s ease;
+      opacity:0; margin-top:0;
+    }
+    .service-card.open .service-desc {
+      max-height:300px; opacity:1; margin-top:16px;
+    }
+    @media(max-width:768px){
+      .services-grid { grid-template-columns:1fr; }
+      .service-card { padding:28px 20px; }
+    }
+
+    /* ARCHIVE / PORTFOLIO */
+    #portfolio { padding:75px 0; background:var(--black); overflow:hidden; }
+    .archive-header {
+      display:flex; flex-direction:row; justify-content:space-between;
+      align-items:flex-end; margin-bottom:60px;
+      max-width:1156px; margin-left:auto; margin-right:auto; padding:0 24px;
+    }
+    .archive-label {
+      font-family:'Cera Pro',sans-serif; font-weight:400; font-size:14px;
+      line-height:18px; letter-spacing:3.3px; text-transform:uppercase;
+      color:#8C7851; margin-bottom:10px;
+    }
+    .archive-title {
+      font-family:'Alumni Sans',sans-serif; font-weight:400;
+      font-size:clamp(36px,4vw,60px); line-height:1.08;
+      letter-spacing:6px; color:#D1C9BC; text-transform:uppercase;
+    }
+    .archive-scroll-hint {
+      font-family:'Cera Pro',sans-serif; font-weight:400; font-size:14px;
+      line-height:18px; letter-spacing:1.65px; color:#D1C9BC; opacity:.5;
+      align-self:flex-end; padding-bottom:6px;
+    }
+    .archive-strip {
+      width:100%; height:488px;
+      overflow-x:scroll; overflow-y:hidden;
+      display:flex; flex-direction:row; gap:15px; padding:0 144px;
+      scrollbar-width:none; -ms-overflow-style:none; cursor:grab;
+    }
+    .archive-strip::-webkit-scrollbar { display:none; }
+    .archive-strip:active { cursor:grabbing; }
+    .archive-card {
+      position:relative; flex:0 0 337.5px; height:487.5px;
+      background:#111111; overflow:hidden;
+    }
+    .archive-card-bg {
+      position:absolute; inset:0;
+      filter:grayscale(100%); opacity:.55; transition:filter .4s, opacity .4s;
+    }
+    .archive-card:hover .archive-card-bg { filter:grayscale(0%); opacity:.85; }
+    .archive-card-corners {
+      position:absolute; inset:0; pointer-events:none;
+      opacity:0; transition:opacity .35s;
+    }
+    .archive-card:hover .archive-card-corners { opacity:0; }
+    .archive-card-corners img {
+      position:absolute; width:48px; height:61px;
+    }
+    .archive-card-corners img:nth-child(1) { bottom:0; left:0; transform:none; }
+    .archive-card-corners img:nth-child(2) { bottom:0; right:0; transform:scaleX(-1); }
+    .archive-card-corners img:nth-child(3) { top:0; left:0; transform:scaleY(-1); }
+    .archive-card-corners img:nth-child(4) { top:0; right:0; transform:scale(-1,-1); }
+    .archive-card-meta {
+      position:absolute; left:30px; right:30px; top:30px;
+      font-family:'Cera Pro',sans-serif; font-weight:400; font-size:7.5px;
+      line-height:9px; letter-spacing:1.5px; text-transform:uppercase;
+      color:#D1C9BC; z-index:1;
+    }
+    .archive-card-title {
+      position:absolute; left:30px; right:30px; bottom:37px;
+      font-family:'Belozersk',serif; font-weight:400; font-size:24px;
+      line-height:26px; color:#D1C9BC; z-index:2;
+    }
+    .archive-card-plus {
+      position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);
+      width:26.4px; height:26.4px; background:rgba(8,8,8,.8);
+      border:.75px solid #D1C9BC; border-radius:50%;
+      display:flex; align-items:center; justify-content:center;
+      opacity:0; transition:opacity .3s; z-index:3;
+    }
+    .archive-card:hover .archive-card-plus { opacity:1; }
+    .archive-card-plus svg { width:8.4px; height:8.4px; }
+
+    /* NEWS */
+    #news {
+      padding:72px 0 70px;
+      background:var(--black);
+      border-top:.75px solid var(--white-5);
+      overflow:hidden;
+    }
+    .news-header {
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-end;
+      gap:32px;
+      margin-bottom:26px;
+    }
+    .news-intro {
+      max-width:380px;
+      margin-top:12px;
+      font-family:'Cera Pro',sans-serif;
+      font-size:12px;
+      line-height:1.7;
+      color:rgba(255,255,255,.55);
+    }
+    .news-scroll-hint {
+      font-family:'Cera Pro',sans-serif;
+      font-size:14px;
+      line-height:18px;
+      letter-spacing:1.65px;
+      color:#D1C9BC;
+      opacity:.5;
+      flex-shrink:0;
+      padding-bottom:8px;
+    }
+    .news-strip {
+      display:flex;
+      gap:14px;
+      overflow-x:auto;
+      overflow-y:hidden;
+      scroll-snap-type:x mandatory;
+      padding:12px 24px 18px;
+      margin:0 -24px;
+      scrollbar-width:none;
+      -ms-overflow-style:none;
+      cursor:grab;
+    }
+    .news-strip::-webkit-scrollbar { display:none; }
+    .news-strip:active { cursor:grabbing; }
+    .news-card {
+      display:flex;
+      flex-direction:column;
+      flex:0 0 248px;
+      scroll-snap-align:start;
+      padding:10px;
+      border:.75px solid rgba(255,255,255,.1);
+      background:rgba(255,255,255,.025);
+      text-decoration:none;
+      color:inherit;
+      transition:transform .35s ease, border-color .35s ease, background .35s ease;
+    }
+    .news-card:hover {
+      transform:translateY(-4px);
+      border-color:rgba(201,168,76,.45);
+      background:rgba(201,168,76,.045);
+    }
+    .news-image {
+      flex-shrink:0;
+      width:100%;
+      aspect-ratio:1/1;
+      margin-bottom:12px;
+      background:#111 center/cover no-repeat;
+      filter:grayscale(45%);
+      transition:filter .35s ease, opacity .35s ease;
+    }
+    .news-card:hover .news-image { filter:grayscale(0%); opacity:.92; }
+    .news-image.news-placeholder {
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border:.75px solid rgba(201,168,76,.18);
+      background:
+        radial-gradient(circle at 50% 42%, rgba(201,168,76,.12), rgba(201,168,76,0) 42%),
+        linear-gradient(145deg, rgba(255,255,255,.04), rgba(255,255,255,.01));
+      filter:none;
+    }
+    .news-image.news-placeholder span {
+      font-family:'Cinzel',serif;
+      font-size:28px;
+      letter-spacing:5px;
+      color:rgba(201,168,76,.55);
+    }
+    .news-meta-row {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:14px;
+      margin-bottom:10px;
+      font-family:'Cera Pro',sans-serif;
+      font-size:8px;
+      line-height:1.4;
+      letter-spacing:1.5px;
+      text-transform:uppercase;
+      color:rgba(255,255,255,.42);
+    }
+    .news-category { color:#C9A84C; }
+    .news-card h3 {
+      margin:0 0 8px;
+      font-family:'Alumni Sans',sans-serif;
+      font-weight:400;
+      font-size:25px;
+      line-height:1.02;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      color:#D1C9BC;
+    }
+    .news-card p {
+      min-height:54px;
+      margin:0 0 12px;
+      font-family:'Cera Pro',sans-serif;
+      font-size:11px;
+      line-height:1.55;
+      color:rgba(255,255,255,.58);
+    }
+    .news-more {
+      display:inline-flex;
+      margin-top:auto;
+      align-items:center;
+      gap:8px;
+      font-family:'Cera Pro',sans-serif;
+      font-size:9px;
+      font-weight:700;
+      letter-spacing:1.8px;
+      text-transform:uppercase;
+      color:#C9A84C;
+    }
+
+
+    /* PROCESS */
+    #process { padding:80px 0; background:var(--black); border-top:.75px solid var(--white-5); }
+    .process-inner { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; }
+    .process-text .section-title { color:var(--white); margin-bottom:32px; }
+    .process-text p { font-family:'Cera Pro',sans-serif; font-size:14px; line-height:1.85; color:var(--white-60); margin-bottom:20px; }
+    .process-steps { display:flex; flex-direction:column; }
+    .process-step { display:flex; align-items:flex-start; gap:24px; padding:28px 0; border-bottom:.75px solid var(--white-5); }
+    .process-step:first-child { border-top:.75px solid var(--white-5); }
+    .step-num { font-family:'Cinzel',serif; font-size:14px; color:var(--gold); min-width:36px; text-align:right; margin-top:3px; flex-shrink:0; }
+    .step-body h3 { font-family:'Cera Pro',sans-serif; font-weight:700; font-size:12px; letter-spacing:2.5px; text-transform:uppercase; color:var(--white); margin-bottom:8px; }
+    .step-body p { font-family:'Cera Pro',sans-serif; font-size:12px; line-height:1.8; color:var(--white-50); }
+
+        /* ── FAQ ── */
+    #faq { padding:100px 0; background:var(--black); border-top:.75px solid var(--white-5); }
+    .faq-inner { display:grid; grid-template-columns:1fr 1.6fr; gap:80px; align-items:start; }
+    .faq-left .section-title { color:var(--white); margin-bottom:24px; }
+    .faq-left p { font-family:'Cera Pro',sans-serif; font-size:13px; line-height:1.85; color:rgba(255,255,255,0.55); margin-bottom:32px; }
+    .faq-list { display:flex; flex-direction:column; }
+    .faq-item { border-bottom:.75px solid rgba(255,255,255,0.08); cursor:pointer; }
+    .faq-item:first-child { border-top:.75px solid rgba(255,255,255,0.08); }
+    .faq-q { display:flex; justify-content:space-between; align-items:center; gap:20px;
+      padding:22px 0; font-family:'Cera Pro',sans-serif; font-size:13px; font-weight:700;
+      letter-spacing:0.5px; color:var(--white); transition:color .25s; user-select:none; }
+    .faq-item:hover .faq-q { color:#C9A84C; }
+    .faq-icon { font-size:20px; font-weight:300; color:rgba(255,255,255,0.4);
+      transition:transform .3s, color .25s; flex-shrink:0; line-height:1; }
+    .faq-item.open .faq-icon { transform:rotate(45deg); color:#C9A84C; }
+    .faq-a { max-height:0; overflow:hidden; opacity:0;
+      transition:max-height .4s ease, opacity .35s ease, padding .3s ease;
+      font-family:'Cera Pro',sans-serif; font-size:13px; line-height:1.8;
+      color:rgba(255,255,255,0.6); padding-bottom:0; }
+    .faq-item.open .faq-a { max-height:400px; opacity:1; padding-bottom:22px; }
+
+    /* CONTACTS */
+    #contacts { padding:96px 0; background:var(--black); border-top:.75px solid var(--white-5); }
+    .contacts-inner { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:80px; }
+    .contacts-social .section-title { color:var(--white); margin-bottom:24px; }
+    .contacts-social p { font-family:'Cera Pro',sans-serif; font-size:14px; line-height:1.85; color:var(--white-60); margin-bottom:40px; }
+    @media(max-width:768px) {
+      .contacts-inner { grid-template-columns:1fr; gap:56px; }
+      .contacts-social p { margin-bottom:28px; }
+    }
+    .contacts-text .section-title { color:var(--white); margin-bottom:24px; }
+    .contacts-text p { font-family:'Cera Pro',sans-serif; font-size:14px; line-height:1.85; color:var(--white-60); margin-bottom:40px; }
+    .contacts-links { display:flex; flex-direction:column; gap:16px; }
+    .contact-link { display:flex; align-items:center; gap:16px; font-family:'Cera Pro',sans-serif; font-size:14px; color:var(--white-60); text-decoration:none; transition:color .3s; }
+    .contact-link:hover { color:var(--gold); }
+    .contact-link-icon { width:36px; height:36px; border:.75px solid var(--white-10); display:flex; align-items:center; justify-content:center; flex-shrink:0; transition:border-color .3s, background .3s; }
+    .contact-link:hover .contact-link-icon { border-color:var(--gold-30); background:rgba(201,168,76,.05); }
+    .contact-link-icon svg { width:16px; height:16px; stroke:currentColor; fill:none; }
+    .contact-form { display:flex; flex-direction:column; gap:20px; }
+    .form-group { display:flex; flex-direction:column; gap:8px; }
+    .form-group label { font-family:'Cera Pro',sans-serif; font-size:10px; letter-spacing:2px; text-transform:uppercase; color:var(--white-50); }
+    .form-group input, .form-group textarea {
+      background:transparent; border:none; border-bottom:.75px solid var(--white-10);
+      color:var(--white); font-family:'Cera Pro',sans-serif; font-size:14px; font-weight:300;
+      padding:12px 0; outline:none; resize:none; transition:border-color .3s; width:100%;
+    }
+    .form-group input::placeholder, .form-group textarea::placeholder { color:var(--white-20); }
+    .form-group input:focus, .form-group textarea:focus { border-bottom-color:var(--gold); }
+    .form-group textarea { height:100px; }
+    .form-submit {
+      display:inline-flex; align-items:center; gap:12px;
+      background:var(--gold); color:var(--black); font-family:'Cera Pro',sans-serif;
+      font-size:11px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase;
+      border:none; padding:16px 32px; cursor:pointer; transition:opacity .3s; align-self:flex-start;
+    }
+    .form-submit:hover { opacity:.85; }
+    .form-submit svg { width:14px; height:14px; stroke:var(--black); fill:none; }
+
+    /* FOOTER */
+    footer { background:var(--black); border-top:.75px solid var(--white-5); padding:40px 0; }
+    .footer-inner { display:flex; align-items:center; justify-content:space-between; }
+    .footer-logo-text { font-family:'Alumni Sans',sans-serif; font-size:18px; letter-spacing:4px; text-transform:uppercase; color:var(--white-50); display:flex; align-items:center; gap:10px; }
+    .footer-copy { font-family:'Cera Pro',sans-serif; font-size:11px; letter-spacing:1px; color:var(--white-20); }
+    .footer-tagline { font-family:'Bella Script CYR',cursive; font-size:24px; color:var(--gold); opacity:.6; font-weight:400; }
+
+    /* SCROLL REVEAL */
+    .reveal { opacity:1; transform:none; transition:opacity .7s ease, transform .7s ease; }
+    .reveal.reveal-ready { opacity:0; transform:translateY(24px); }
+    .reveal.visible { opacity:1; transform:none; }
+    .reveal-delay-1 { transition-delay:.1s; }
+    .reveal-delay-2 { transition-delay:.2s; }
+    .reveal-delay-3 { transition-delay:.3s; }
+    .reveal-delay-4 { transition-delay:.4s; }
+
+    /* CURSOR */
+    @media(max-width:768px){ .cursor, .cursor-ring { display:none !important; } }
+    .cursor { position:fixed; width:6px; height:6px; background:var(--gold); border-radius:50%; pointer-events:none; z-index:9999; transform:translate(-50%,-50%); transition:transform .1s; }
+    .cursor-ring { position:fixed; width:32px; height:32px; border:1px solid var(--gold-30); border-radius:50%; pointer-events:none; z-index:9998; transform:translate(-50%,-50%); transition:transform .15s ease, width .3s, height .3s, border-color .3s; }
+
+    @media (max-width:768px) {
+      .values-grid { grid-template-columns:1fr 1fr; gap:40px 24px; }
+      .services-grid { grid-template-columns:1fr 1fr; }
+      .service-card { border-right:none; border-bottom:.9px solid var(--white-10); }
+      .process-inner, .tech-inner, .contacts-inner { grid-template-columns:1fr; gap:40px; }
+      .stats-grid { grid-template-columns:1fr 1fr; }
+      .stat-item { border-right:none; border-bottom:1px solid rgba(10,10,10,.15); }
+      .footer-inner { flex-direction:column; gap:16px; text-align:center; }
+      .archive-header { flex-direction:column; align-items:flex-start; gap:8px; }
+      header { mix-blend-mode:normal; background:rgba(10,10,10,.8); backdrop-filter:blur(8px); }
+      .hero-tagline { font-size:72px; line-height:0.95; }
+    }
+
+    /* ── VIDEO OVERLAY ── */
+    .video-overlay {
+      display:none; position:fixed; inset:0; z-index:9999;
+      align-items:center; justify-content:center;
+    }
+    .video-overlay.active { display:flex; }
+    .video-overlay-backdrop {
+      position:absolute; inset:0;
+      background:rgba(0,0,0,.5);
+    }
+    .video-overlay-box {
+      position:relative; z-index:1;
+      width:70vw; max-width:70vw;
+      background:#000;
+      box-shadow:0 0 80px rgba(0,0,0,.8);
+    }
+    .video-overlay-box video {
+      display:block; width:100%; height:auto;
+    }
+    .video-overlay-close {
+      position:absolute; top:-44px; right:0;
+      width:36px; height:36px; cursor:pointer;
+      display:flex; align-items:center; justify-content:center;
+      background:none; border:none; padding:0;
+    }
+    .video-overlay-close svg { width:24px; height:24px; }
+    .archive-card { cursor:pointer; }
+    /* Process step hover descriptions */
+    .step-desc {
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+      transition: max-height 0.4s ease, opacity 0.3s ease, margin-top 0.3s ease;
+      font-family: 'Cera Pro', sans-serif;
+      font-size: 13px;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.6);
+      margin-top: 0;
+    }
+    .process-step-hover:hover .step-desc {
+      max-height: 200px;
+      opacity: 1;
+      margin-top: 10px;
+    }
+    .process-step-hover {
+      cursor: default;
+      transition: background 0.2s;
+    }
+    .process-step-hover:hover {
+      background: rgba(255,255,255,0.02);
+    }
+    /* ── CASES ── */
+    #cases { padding:80px 0; background:var(--black); border-top:.75px solid var(--white-5); }
+    .cases-header { display:flex; flex-direction:row; justify-content:space-between; align-items:flex-end;
+      margin-bottom:60px; width:100%; padding:0 144px; box-sizing:border-box; }
+    .cases-grid { display:flex; flex-direction:row; gap:15px;
+      width:100%; padding:0 144px;
+      overflow-x:auto; overflow-y:hidden; scrollbar-width:none; -ms-overflow-style:none; cursor:grab; }
+    .cases-grid::-webkit-scrollbar { display:none; }
+    .cases-grid:active { cursor:grabbing; }
+    .case-card {
+      position:relative; width:380px; height:460px; flex:0 0 380px;
+      background:#181B17; overflow:hidden; cursor:pointer; text-decoration:none; display:block;
+    }
+    .case-image-wrapper { position:absolute; inset:0; z-index:0; }
+    .case-image-bg {
+      position:absolute; left:-5px; right:-5px; top:-5px; bottom:-5px;
+      background-size:cover; background-position:center;
+      filter:grayscale(100%) brightness(0.85);
+      transition:filter .45s ease;
+    }
+    .case-card:hover .case-image-bg { filter:grayscale(0%) brightness(1); }
+    .case-overlay {
+      position:absolute; inset:0; z-index:1;
+      background:linear-gradient(0deg, rgba(2,3,2,.95) 0%, rgba(2,3,2,.6) 26.44%, rgba(28,46,30,.1) 52.88%, rgba(2,3,2,.6) 75.48%, rgba(2,3,2,.95) 100%);
+    }
+    .case-frame-border {
+      box-sizing:border-box; position:absolute; left:15px; right:15px; top:15px; bottom:15px;
+      border:1px solid rgba(201,168,76,.15); z-index:2; pointer-events:none;
+      transition:border-color .35s;
+    }
+    .case-card:hover .case-frame-border { border-color:rgba(201,168,76,.35); }
+    .case-date-left {
+      position:absolute; left:30px; top:24px; z-index:3;
+      font-family:'Cera Pro',sans-serif; font-size:12.8px; line-height:20px;
+      letter-spacing:1.28px; color:#7A1C1C;
+    }
+    .case-date-right {
+      position:absolute; right:30px; top:24px; z-index:3;
+      font-family:'Cera Pro',sans-serif; font-size:12.8px; line-height:20px;
+      letter-spacing:1.28px; color:#7A1C1C;
+    }
+    .case-content {
+      position:absolute; bottom:0; left:0; right:0; z-index:5;
+      padding:30px; display:flex; flex-direction:column; gap:0;
+    }
+    .case-client {
+      font-family:'Oswald','Alumni Sans',sans-serif; font-size:12px; line-height:19px;
+      letter-spacing:3.6px; text-transform:uppercase; color:#C9A84C;
+      opacity:.8; margin-bottom:8px;
+    }
+    .case-title {
+      font-family:'Belozersk Font',serif; font-size:clamp(20px,3vw,36px); line-height:1.15;
+      color:#8A1F1F; margin:0 0 8px 0;
+    }
+
+    .case-corners { position:absolute; inset:0; pointer-events:none; opacity:0; transition:opacity .35s; z-index:6; }
+    .case-card:hover .case-corners { opacity:1; }
+    .case-corners img { position:absolute; width:48px; height:61px; }
+    .case-corners img:nth-child(1) { bottom:0; left:0; }
+    .case-corners img:nth-child(2) { bottom:0; right:0; transform:scaleX(-1); }
+    .case-corners img:nth-child(3) { top:0; left:0; transform:scaleY(-1); }
+    .case-corners img:nth-child(4) { top:0; right:0; transform:scale(-1,-1); }
+    @media(max-width:768px){
+      .cases-header { padding:0 20px; }
+      .cases-grid { padding:0 20px; gap:15px; }
+      .case-card { flex:0 0 80vw; height:auto; aspect-ratio:4/3; }
+    }
+
+    /* Responsive layout: shared desktop typography and compact phone rhythm. */
+    @media (max-width: 768px) {
+      html, body {
+        width:100%;
+        max-width:100%;
+        overflow-x:hidden;
+      }
+      body { -webkit-text-size-adjust:100%; }
+      header {
+        padding:12px 18px !important;
+        background:rgba(10,10,10,.92) !important;
+        mix-blend-mode:normal !important;
+        backdrop-filter:blur(12px) !important;
+        -webkit-backdrop-filter:blur(12px) !important;
+      }
+      .header-logo svg, .header-logo img { width:32px; height:32px; }
+      .header-mobile-nav {
+        top:58px;
+        justify-content:flex-start;
+        padding:44px 20px 32px;
+        gap:22px;
+        overflow-y:auto;
+      }
+      section { overflow-x:clip; }
+      .container { padding:0 20px; }
+      #hero {
+        min-height:520px;
+        height:min(740px, 92svh);
+        padding:88px 0 56px;
+        justify-content:center;
+      }
+      .hero-content {
+        max-width:100%;
+        padding:0 20px;
+      }
+      .hero-logo-mark { margin-bottom:20px; }
+      .hero-logo-mark svg, .hero-logo-mark img { width:112px; height:112px; }
+      .hero-title {
+        font-size:clamp(30px, 8.5vw, 38px);
+        line-height:1.05;
+        letter-spacing:2.8px;
+        max-width:340px;
+        margin-bottom:20px;
+      }
+      .hero-cta {
+        margin-top:24px !important;
+        padding:14px 22px !important;
+        max-width:calc(100vw - 40px);
+      }
+      .hero-scroll { bottom:20px; }
+      .section-title,
+      .archive-title {
+        font-size:clamp(30px, 7.7vw, 38px);
+        letter-spacing:3px;
+        line-height:1.02;
+        overflow-wrap:anywhere;
+      }
+      #services,
+      #portfolio,
+      #process,
+      #price,
+      #faq,
+      #contacts {
+        padding-top:40px !important;
+        padding-bottom:40px !important;
+      }
+      .services-header {
+        gap:18px;
+        margin-bottom:28px;
+      }
+      .services-grid {
+        grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+        align-items:stretch;
+        border-left:.9px solid var(--white-10);
+      }
+      .service-card {
+        padding:18px 14px;
+        border-right:.9px solid var(--white-10);
+      }
+      .service-name {
+        font-size:20px;
+        line-height:1.2;
+      }
+      .service-desc {
+        font-size:14px;
+        line-height:1.65;
+      }
+      .archive-header {
+        padding:0 20px;
+        margin-bottom:28px;
+      }
+      .archive-scroll-hint {
+        font-size:12px;
+        padding-bottom:0;
+      }
+      .archive-strip {
+        height:auto;
+        padding:0 20px 6px;
+        gap:14px;
+        scroll-snap-type:x mandatory;
+      }
+      .archive-card {
+        flex:0 0 min(64vw, 280px);
+        height:auto;
+        aspect-ratio:.72;
+        max-height:390px;
+        scroll-snap-align:start;
+      }
+      .archive-card-meta {
+        left:20px;
+        right:20px;
+        top:20px;
+      }
+      .archive-card-title {
+        left:20px;
+        right:20px;
+        bottom:24px;
+        font-size:22px;
+        line-height:24px;
+      }
+      .archive-card-plus { opacity:1; }
+      #news {
+        padding:42px 0 40px;
+      }
+      .news-header {
+        flex-direction:column;
+        align-items:flex-start;
+        gap:8px;
+        margin-bottom:18px;
+      }
+      .news-intro {
+        max-width:none;
+        margin-top:8px;
+        font-size:11px;
+        line-height:1.55;
+      }
+      .news-scroll-hint {
+        font-size:11px;
+        padding-bottom:0;
+      }
+      .news-strip {
+        margin:0 -20px;
+        padding:12px 20px 8px;
+        gap:10px;
+      }
+      .news-card {
+        flex:0 0 min(248px, 76vw);
+        padding:8px;
+      }
+      .news-image {
+        margin-bottom:9px;
+      }
+      .news-meta-row {
+        margin-bottom:8px;
+        gap:8px;
+        font-size:7px;
+        letter-spacing:1.1px;
+      }
+      .news-card h3 {
+        margin-bottom:6px;
+        font-size:20px;
+        letter-spacing:1.6px;
+        line-height:1.04;
+      }
+      .news-card p {
+        min-height:0;
+        margin-bottom:10px;
+        font-size:12px;
+        line-height:1.55;
+      }
+      .news-more {
+        font-size:8px;
+        letter-spacing:1.4px;
+      }
+      .process-inner,
+      .faq-inner { display:block; }
+      .process-text {
+        position:static;
+        top:auto;
+        margin-bottom:32px;
+      }
+      .process-step {
+        gap:16px;
+        padding:16px 0;
+      }
+      .step-num {
+        min-width:30px;
+        text-align:left;
+      }
+      .step-desc {
+        max-height:none;
+        opacity:1;
+        margin-top:10px;
+      }
+      .process-step-hover:hover { background:transparent; }
+      #price .container > div {
+        grid-template-columns:1fr !important;
+        gap:28px !important;
+      }
+      #price a,
+      #faq a,
+      #cta-banner a,
+      #contacts a[style*="inline-flex"] {
+        width:auto;
+        max-width:100%;
+        min-height:44px;
+      }
+      .faq-left { margin-bottom:34px; }
+      .faq-q {
+        padding:16px 0;
+        align-items:flex-start;
+      }
+      .faq-a {
+        font-size:13px;
+        line-height:1.7;
+      }
+      .contacts-inner { max-width:none; }
+      .contacts-text p { margin-bottom:28px; }
+      .contact-link {
+        align-items:flex-start;
+        min-width:0;
+        overflow-wrap:anywhere;
+        word-break:break-word;
+      }
+      .contact-link-icon { margin-top:-6px; }
+      .footer-inner { align-items:center; }
+      .footer-logo-text {
+        justify-content:center;
+        flex-wrap:wrap;
+        line-height:1.1;
+      }
+      .video-overlay-box,
+      .video-overlay-box[style] {
+        width:92vw !important;
+        max-width:92vw !important;
+      }
+      .video-overlay-close {
+        top:-42px;
+        right:0;
+      }
+      #privacy-modal > div {
+        width:calc(100% - 32px) !important;
+        margin:24px auto !important;
+        padding:34px 20px !important;
+      }
+      #privacy-modal .privacy-title {
+        font-size:24px !important;
+        letter-spacing:2px !important;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .hero-title {
+        font-size:30px;
+        letter-spacing:2.2px;
+      }
+      .archive-card { flex-basis:68vw; }
+      .section-title,
+      .archive-title { letter-spacing:2.4px; }
+    }
+
+    @media (max-width:768px) {
+      .service-icon { width:24px; height:24px; margin-bottom:12px; }
+      .service-toggle { margin-left:6px; width:18px; }
+      .service-card.open .service-desc { max-height:720px; }
+      .service-desc { font-size:13px; line-height:1.6; }
+      .services-header, .archive-header { margin-bottom:24px; }
+      .process-text .section-title, .faq-left .section-title,
+      .contacts-text .section-title { margin-bottom:18px; }
+      .process-text p, .contacts-text p { font-size:14px; line-height:1.65; }
+      .process-text { margin-bottom:22px; }
+      .step-desc { margin-top:6px; font-size:12px; line-height:1.6; }
+      .step-body h3 { font-size:11px; letter-spacing:1.6px; }
+      .faq-left { margin-bottom:24px; }
+      .faq-left p { margin-bottom:20px; }
+      .archive-header { flex-direction:row; align-items:center; }
+      .archive-scroll-hint { font-size:10px; letter-spacing:1px; }
+      .news-meta-row { font-size:8px; }
+      .news-more { font-size:9px; }
+      #price .container > div > div:first-child > div[style*="inline-block"] {
+        padding:16px 20px !important; margin-bottom:24px !important;
+      }
+      #price .container > div > div:nth-child(2) > div:nth-child(2) > div {
+        padding:12px 0 !important;
+      }
+      #price .section-title, #price p { margin-bottom:22px !important; }
+      #cta-banner { padding:48px 20px !important; }
+      #cta-banner > div:last-child { gap:24px !important; width:100%; }
+      #cta-banner h2 { font-size:clamp(24px,6.5vw,32px) !important;
+        letter-spacing:1.5px !important; white-space:normal !important; }
+      section:has(> a:only-child) { padding:28px 0 !important; }
+      .footer-logo-text { font-size:16px; letter-spacing:2px; }
+    }
+    @media (max-width:359px) {
+      .services-grid { grid-template-columns:1fr !important; }
+      .service-card { padding:16px; }
+      .service-icon { float:left; margin:0 12px 0 0; }
+      .service-card-top { min-height:30px; }
+      .service-desc { clear:both; }
+    }
+
+.reveal{opacity:1!important;transform:none!important} html,body{height:auto;min-height:0} body{background:#0a0a0a}
+</style></head><body>  <!-- CONTACTS -->
+  <section id="contacts">
+    <div class="container">
+      <div class="contacts-inner">
+        <div class="contacts-text">
+          <h2 class="section-title reveal">Напишите<br>нам</h2>
+          <p class="reveal reveal-delay-1">Напишите нам, и наш менеджер ответит на все ваши вопросы. Расскажем о стоимости, сроках и возможностях для вашего проекта.</p>
+          <div class="contacts-links">
+            <a href="mailto:info@filmstudio.moscow" class="contact-link reveal reveal-delay-2">
+              <div class="contact-link-icon"><svg viewBox="0 0 24 24" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="1"/kinomsk-host-test/full/><polyline points="2,4 12,13 22,4"/kinomsk-host-test/full/></svg></div>
+              info@filmstudio.moscow
+            </a>
+            <a href="tel:+79854684242" class="contact-link reveal reveal-delay-3">
+              <div class="contact-link-icon"><svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5 19.79 19.79 0 01.5 2.88 2 2 0 012.5.5h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/kinomsk-host-test/full/></svg></div>
+              +7 985 468 42 42
+            </a>
+            <a href="https://t.me/m/L3l68gJKNDNi" class="contact-link reveal reveal-delay-4" target="_blank">
+              <div class="contact-link-icon"><svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M21 5L2 12.5l7 1M21 5l-2.5 14L9 13.5M21 5L9 13.5m0 0v5l3.5-3"/kinomsk-host-test/full/></svg></div>
+              @kinomoskva
+            </a>
+          </div>
+          <div class="reveal reveal-delay-4" style="margin-top:40px;">
+            <a href="https://t.me/m/L3l68gJKNDNi" target="_blank" style="display:inline-flex; align-items:center; justify-content:center; padding:15px 30px; border:0.75px solid #C9A84C; text-decoration:none; transition:background .3s; white-space:nowrap;" onmouseover="this.style.background='rgba(201,168,76,0.1)'" onmouseout="this.style.background='transparent'">
+              <span style="font-family:'Cera Pro',sans-serif; font-weight:700; font-size:10.5px; letter-spacing:2.625px; text-transform:uppercase; color:#C9A84C; white-space:nowrap;">ЗАДАТЬ ВОПРОС</span>
+            </a>
+          </div>
+        </div>
+        <div class="contacts-social">
+          <h2 class="section-title reveal">Наши<br>соцсети</h2>
+          <p class="reveal reveal-delay-1">Следите за новостями и проектами киностудии в наших социальных сетях.</p>
+          <div class="contacts-links">
+            <a href="https://t.me/kinomskv" class="contact-link reveal reveal-delay-4" target="_blank" rel="noopener noreferrer">
+              <div class="contact-link-icon"><svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M21 5L2 12.5l7 1M21 5l-2.5 14L9 13.5M21 5L9 13.5m0 0v5l3.5-3"/kinomsk-host-test/full/></svg></div>
+              Telegram-канал
+            </a>
+            <a href="https://dzen.ru/kinostudiomoscow?share_to=link" class="contact-link reveal reveal-delay-4" target="_blank" rel="noopener noreferrer">
+              <div class="contact-link-icon"><svg viewBox="0 0 169 169" aria-hidden="true"><path style="fill:currentColor;stroke:none" d="M148.369 82.7304C148.369 82.0906 147.849 81.5608 147.209 81.5308C124.246 80.661 110.271 77.732 100.494 67.955C90.6967 58.1581 87.7776 44.1724 86.9079 21.1596C86.8879 20.5198 86.358 20 85.7082 20H83.0291C82.3893 20 81.8594 20.5198 81.8295 21.1596C80.9597 44.1624 78.0406 58.1581 68.2437 67.955C58.4568 77.742 44.4911 80.661 21.5283 81.5308C20.8885 81.5508 20.3687 82.0806 20.3687 82.7304V85.4096C20.3687 86.0494 20.8885 86.5792 21.5283 86.6092C44.4911 87.4789 58.4667 90.408 68.2437 100.185C78.0206 109.962 80.9397 123.908 81.8195 146.83C81.8394 147.47 82.3693 147.99 83.0191 147.99H85.7082C86.348 147.99 86.8779 147.47 86.9079 146.83C87.7876 123.908 90.7067 109.962 100.484 100.185C110.271 90.398 124.236 87.4789 147.199 86.6092C147.839 86.5892 148.359 86.0594 148.359 85.4096V82.7304H148.369Z"/kinomsk-host-test/full/></svg></div>
+              Дзен
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo-text">
+          <svg width="32" height="32" viewBox="0 0 567 567" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_203_525)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M408.793 198.974C405.203 200.47 401.812 204.833 400.565 206.828C405.951 205.93 408.544 207.576 409.541 208.698C396.825 209.072 396.077 214.308 396.077 216.926C396.077 219.544 400.939 239.367 397.947 243.481C395.553 246.772 396.95 249.839 397.947 250.961C408.793 271.158 416.648 322.397 375.132 350.448C411.037 299.582 355.31 268.54 341.097 265.922C335.712 265.323 332.383 261.807 331.373 258.441C330.363 255.075 329.628 248.218 329.877 246.473L333.617 246.099L337.357 241.985C336.46 240.19 332.744 239.242 330.999 238.993C330.625 237.497 333.243 236.001 335.487 236.001C337.562 236.001 343.342 237.497 346.334 233.009C349.326 228.52 353.829 226.862 355.31 226.65C357.928 226.276 369.148 226.65 371.766 227.024C373.84 227.321 376.878 228.645 378.124 229.268C382.313 222.686 389.345 215.555 392.337 212.812C396.227 202.34 404.928 199.223 408.793 198.974ZM359.05 234.131C356.955 234.131 352.692 237.622 350.822 239.367C353.066 241.112 358.601 243.107 360.172 241.985C362.416 240.382 365.782 239.367 367.278 238.619C366.904 237.871 363.42 234.839 362.416 234.505C361.294 234.131 361.668 234.131 359.05 234.131Z" fill="#C9A84C"/kinomsk-host-test/full/>
+<path d="M163.068 363.912C151.399 374.085 148.981 404.804 149.23 418.892H188.127C187.828 406.026 177.032 402.56 171.67 402.435C171.67 390.467 177.351 382.987 191.493 382.987C207.575 382.987 220.043 373.138 225.528 367.278C229.717 363.688 234.379 354.44 236 350.074C237.622 345.708 238.083 341.472 244.977 329.877C251.559 318.807 261.932 317.784 266.295 318.657C254.327 320.752 248.094 336.236 246.473 343.716C264.051 340.724 283.5 352.318 290.98 357.18C296.964 361.07 300.455 360.795 301.452 360.172C311.625 356.283 315.914 341.098 316.787 333.991C321.649 349.7 314.543 359.05 309.306 365.782C319.031 372.141 354.936 404.679 362.416 412.16C368.4 418.144 372.888 419.391 374.384 419.266H407.671C406.923 415.526 406.923 414.03 403.931 408.794C399.085 400.312 387.599 401.438 382.238 403.183C379.994 402.061 366.53 387.101 357.18 371.393C350.384 359.975 353.939 349.7 357.18 345.586C366.156 333.243 365.707 318.059 363.912 303.697C362.117 289.335 350.448 277.017 344.837 272.654C345.71 276.893 345.137 286.417 335.861 290.606C324.267 295.842 313.42 293.972 308.184 292.85C302.948 291.728 297.338 289.858 276.019 283.5C258.965 278.414 240.488 281.381 233.382 283.5C223.209 285.595 203.71 296.84 195.233 302.201C174.887 309.082 158.331 298.585 152.596 292.476C149.978 294.72 148.794 302.201 149.978 305.941C156.253 325.763 181.978 322.785 193.363 316.413C187.379 336.61 191.867 334.365 186.257 348.578C181.769 359.948 168.927 363.538 163.068 363.912Z" fill="#C9A84C"/kinomsk-host-test/full/>
+<path d="M246.099 351.57C241.61 352.767 240.488 357.803 240.488 360.172C248.717 378.125 241.984 385.605 238.244 386.881C237.496 387.849 237.87 390.247 238.992 392.117C245.276 401.991 266.669 417.022 277.515 419.266H311.924C310.802 408.045 299.956 400.939 293.224 403.183C287.891 404.961 283.375 404.18 281.63 403.183C274.449 399.892 268.664 392.088 266.669 388.597C280.732 381.117 284.747 368.275 284.996 362.79C284.996 362.491 271.498 355.507 265.921 353.44C260.345 351.372 250.587 350.373 246.099 351.57Z" fill="#C9A84C"/kinomsk-host-test/full/>
+<path d="M398.321 337.732C392.936 349.401 374.136 360.297 365.409 364.286C365.409 364.286 406.875 360.792 411.038 361.668C418.144 363.164 414.703 370.644 412.908 372.141C410.664 374.011 411.814 375.887 411.038 379.247C410.262 382.607 407.298 384.857 409.168 387.475C411.038 390.093 421.884 390.841 426.372 387.475C440.149 377.143 432.356 354.562 431.608 351.57C430.86 348.578 425.25 345.212 421.884 344.464C419.191 343.865 405.054 339.727 398.321 337.732Z" fill="#C9A84C"/kinomsk-host-test/full/>
+<path d="M192.241 119.683C197.851 126.291 212.213 141.451 224.78 149.23C240.489 158.954 256.571 169.053 261.059 172.419C265.547 175.785 267.043 176.907 268.913 180.273C270.783 183.639 272.28 188.127 273.402 191.119C274.524 194.111 280.508 207.95 292.85 207.202C305.192 206.454 303.696 204.584 310.803 203.462C316.488 202.564 323.237 202.356 325.763 203.088C328.066 203.755 332.196 206.678 332.495 207.576C332.869 208.698 333.617 209.82 338.105 209.446C342.593 209.072 349.326 215.43 349.326 217.674C342.967 216.926 334.365 217.674 330.999 218.796C327.825 219.854 321.026 224.406 316.787 227.398C314.543 228.894 308.858 233.308 304.07 238.993C298.086 246.099 294.72 247.969 291.728 249.091C288.736 250.213 281.618 250.647 275.646 259.937C272.28 265.173 275.272 268.315 278.264 271.906C280.134 274.15 284.547 278.787 285.744 279.386C287.24 280.134 295.468 280.882 296.59 286.492L270.035 278.638C270.285 278.015 271.382 276.768 273.776 276.768C276.169 276.768 275.771 275.272 275.272 274.524L265.547 264.799C266.295 261.308 264.051 255.823 260.685 257.693C257.319 259.563 257.319 261.059 255.075 264.051C253.144 266.625 243.481 278.264 225.902 279.386C236.374 272.28 247.445 263.752 248.343 261.059C239.99 268.914 218.048 282.378 205.706 277.89C213.56 274.524 228.969 267.642 235.252 261.059C224.78 267.667 202.04 275.496 193.363 268.914C212.438 264.051 231.886 255.823 240.489 249.465C249.091 243.107 247.969 243.481 253.205 237.123C254.576 235.378 257.843 231.513 259.937 230.016C254.327 231.139 242.134 232.186 238.245 227.398C244.977 226.65 249.614 224.332 253.205 221.04C244.603 221.539 229.268 223.284 224.406 216.178C230.764 215.679 244.453 213.934 248.343 210.942C236.998 211.565 212.812 209.895 206.828 198.226C214.308 200.844 236 201.966 240.863 200.844C238.868 199.473 231.587 196.131 218.422 193.737C205.257 191.344 195.233 181.769 189.249 171.297C195.607 175.037 209.99 180.733 219.918 182.891C228.52 184.761 232.26 186.257 236 188.127C236.125 187.005 232.485 183.116 216.926 176.533C197.477 168.305 185.883 161.199 182.517 141.002L182.599 141.074C188.383 146.103 202.046 157.984 210.194 161.199C217.404 164.043 231.737 171.746 234.13 173.541C233.133 171.297 227.772 165.013 214.308 157.832C197.477 148.856 190.745 126.416 192.241 119.683ZM326.137 208.324C325.389 207.576 323.893 206.828 322.397 207.576C320.901 208.324 321.275 209.446 321.275 210.568C322.397 211.565 326.137 212.812 326.885 210.568C327.259 209.446 326.735 208.922 326.137 208.324Z" fill="#C9A84C"/kinomsk-host-test/full/>
+<path d="M363.913 222.162C368.7 221.564 374.136 223.159 376.255 224.032C369.373 211.466 373.388 199.847 376.255 195.608C370.869 196.804 365.783 213.809 363.913 222.162Z" fill="#C9A84C"/kinomsk-host-test/full/>
+<path d="M278.304 192.989C281.895 204.06 293.764 204.584 298.875 203.088C294.013 200.47 293.04 193.289 292.143 184.013C291.129 173.541 287.28 170.923 284.662 167.557C282.568 164.864 270.076 153.718 264.092 146.986C251.791 133.148 241.651 120.057 239.033 111.455C233.647 128.809 246.762 146.363 252.497 151.848C244.12 147.061 231.802 133.896 228.187 129.034C225.943 141.002 233.423 149.23 236.041 151.1C238.659 152.97 240.863 154.84 255.075 163.817C273.353 175.361 273.816 179.151 278.304 192.989Z" fill="#C9A84C"/kinomsk-host-test/full/>
+<path d="M57.6679 163.992L74.3941 174.736C74.0673 174.312 73.7652 173.883 73.4881 173.447C73.1806 172.993 72.8829 172.524 72.5949 172.039C72.2463 171.516 71.9227 170.986 71.6239 170.452C71.2948 169.899 70.9657 169.345 70.6365 168.791C69.7487 167.108 69.0048 165.367 68.4047 163.569C67.8047 161.772 67.3842 159.961 67.1434 158.136C66.9219 156.282 66.9353 154.429 67.1835 152.576C67.4013 150.705 67.9146 148.873 68.7232 147.08C68.8097 146.879 68.9113 146.688 69.0281 146.506C69.1341 146.275 69.2303 146.058 69.3167 145.857L73.6084 139.175L83.6531 145.628L79.1575 152.627L72.3849 148.277C72.3179 148.448 72.2455 148.594 72.1676 148.716C72.0897 148.837 72.0173 148.983 71.9503 149.153C71.0012 151.497 70.6072 153.877 70.7682 156.292C70.9292 158.706 71.4743 161.089 72.4035 163.441C74.1219 164.031 76.0038 164.534 78.0482 164.948C80.0828 165.313 82.1338 165.518 84.2029 165.563C86.2712 165.607 88.3118 165.463 90.3239 165.129C92.3361 164.795 94.1897 164.209 95.8832 163.371L91.8379 160.772L96.3343 153.773L105.425 159.612L104.607 160.884C103.844 161.807 103.055 162.669 102.238 163.473C101.423 164.275 100.501 165.01 99.4745 165.677C98.0809 166.58 96.5602 167.315 94.9115 167.883C93.2824 168.42 91.6105 168.823 89.8968 169.092C88.1726 169.312 86.4365 169.416 84.6876 169.406C82.9282 169.346 81.2377 169.18 79.6145 168.908C78.7333 168.813 77.8873 168.697 77.0757 168.561C76.2537 168.376 75.4166 168.18 74.5636 167.975C74.6762 168.133 74.7639 168.296 74.8264 168.465C74.8893 168.634 74.9775 168.797 75.0897 168.955C76.9867 171.8 79.0557 174.542 81.2991 177.181C83.5304 179.77 86.0467 182.05 88.8481 184.02L89.4839 184.428L84.9883 191.428L53.1718 170.992L57.6679 163.992ZM88.2766 119.541L94.3101 113.812L115.176 135.79C115.131 133.598 115.368 130.866 115.886 127.593C116.405 124.27 117.415 120.182 118.917 115.329C118.919 115.227 118.947 115.152 118.999 115.103L121.975 118.237C121.751 118.995 121.484 119.968 121.173 121.158C120.862 122.347 120.56 123.651 120.269 125.07C119.978 126.489 119.71 127.959 119.467 129.482C119.224 131.004 119.058 132.478 118.97 133.902C118.908 135.301 118.938 136.613 119.059 137.839C119.206 139.041 119.511 140.042 119.975 140.844L120.346 141.235L114.313 146.964L88.2766 119.541ZM108.96 99.9775L114.993 94.2499L140.992 121.633L134.959 127.362L108.96 99.9775ZM133.854 78.632L141.072 74.4948L148.782 87.9456C150.052 86.1795 151.903 84.1225 154.335 81.7744C156.766 79.4256 160.09 76.7522 164.308 73.7541C164.558 73.6108 164.736 73.4877 164.843 73.3848L159.444 63.9644L166.662 59.8275L185.492 92.6821L178.275 96.8186L166.724 76.6654C166.617 76.7687 166.438 76.8913 166.188 77.035C163.819 78.7666 161.773 80.3749 160.05 81.8604C158.31 83.3146 156.838 84.6566 155.634 85.8863C154.442 87.0674 153.463 88.1476 152.696 89.1267C151.96 90.0879 151.371 90.9444 150.931 91.6954L159.903 107.349L152.685 111.486L133.854 78.632ZM225.152 38.7638L235.546 75.1215L199.189 85.5153L188.794 49.1578L225.152 38.7638ZM222.297 43.9065L197.937 50.8705L204.901 75.23L202.045 80.3726L226.404 73.4089L219.44 49.0492L222.297 43.9065ZM249.118 33.7067L286.85 32.2524L287.335 44.8298L279.022 45.1502L278.697 36.7293L257.59 37.5428L258.471 60.3765C261.399 60.5881 264.005 60.8841 266.29 61.2645C268.574 61.609 270.572 62.0185 272.284 62.4931C273.995 62.9318 275.473 63.3973 276.717 63.89C277.961 64.3826 278.99 64.8837 279.802 65.3929L279.507 57.7277L287.819 57.4073L288.306 70.0387L279.994 70.3591C279.843 70.1847 279.433 69.8401 278.764 69.3253C278.13 68.7731 277.026 68.1849 275.452 67.5608C273.913 66.8994 271.78 66.2608 269.054 65.645C266.362 65.028 262.884 64.5493 258.619 64.2092C257.352 64.0778 256.033 63.9845 254.661 63.9292C253.289 63.838 251.827 63.7862 250.276 63.7739L249.118 33.7067ZM309.716 40.7494L311.282 33.0194L348.343 40.5276L346.778 48.2576L338.624 46.6058L339.45 42.5291L333.203 41.2633L326.435 74.6717L318.228 73.0091L324.17 43.6776L328.967 40.4053L318.696 38.3243L317.87 42.4011L309.716 40.7494ZM359.427 73.7219L366.947 77.2796L365.191 80.9913L384.284 90.0244L385.047 88.4131C383.946 86.6972 382.427 84.9819 380.488 83.2682C378.598 81.5373 376.509 79.8909 374.219 78.3298C371.978 76.7515 369.683 75.2868 367.333 73.9367C365.032 72.5691 362.928 71.3743 361.021 70.3526L371.995 47.1578L379.515 50.7157L369.904 71.0294C374.556 73.828 378.22 76.358 380.895 78.62C383.57 80.8813 385.57 82.8433 386.895 84.5062L398.631 59.7002L406.151 63.2581L390.028 97.4627L355.846 81.2905L359.427 73.7219ZM403.713 104.653L406.34 101.427L413.252 107.056C413.999 107.108 415.041 106.911 416.379 106.467C417.716 106.023 419.352 105.126 421.287 103.776C423.273 102.421 425.562 100.523 428.153 98.082C430.768 95.6128 433.715 92.3933 436.995 88.4228L431.382 83.8517L434.043 80.5843L456.955 99.2437L433.077 128.565L403.713 104.653ZM429.253 120.087L447.844 97.2577L439.927 90.8105C438.472 92.5976 436.869 94.4511 435.121 96.3706C433.399 98.3132 431.567 100.165 429.622 101.925C427.705 103.709 425.683 105.336 423.555 106.808C421.478 108.275 419.328 109.403 417.105 110.194L429.253 120.087ZM474.811 116.008L479.828 122.643L455.657 140.923C457.84 141.123 460.529 141.664 463.723 142.544C466.968 143.432 470.917 144.892 475.571 146.927C475.672 146.941 475.744 146.976 475.787 147.034L472.341 149.641C471.612 149.334 470.674 148.959 469.527 148.517C468.38 148.075 467.118 147.63 465.74 147.182C464.363 146.734 462.931 146.304 461.446 145.892C459.961 145.48 458.515 145.151 457.109 144.904C455.726 144.687 454.418 144.569 453.186 144.553C451.976 144.565 450.947 144.756 450.098 145.127L449.667 145.453L444.65 138.817L474.811 116.008ZM491.939 138.747L496.957 145.383L466.84 168.16L461.821 161.524L491.939 138.747ZM492.42 173.232L510.107 165.145L525.852 199.586L491.511 215.286L488.03 207.671L518.932 193.542L510.149 174.333L495.902 180.847L492.42 173.232ZM475.765 180.846L479.106 179.319L479.353 179.859C479.563 180.318 479.781 180.753 480.009 181.163C480.269 181.559 480.529 181.955 480.789 182.351C481.71 183.672 482.743 184.804 483.886 185.746C485.077 186.706 486.355 187.508 487.718 188.152C489.114 188.781 490.571 189.283 492.09 189.658C493.64 190.018 495.219 190.267 496.826 190.404C497.148 190.415 497.453 190.433 497.743 190.46C498.064 190.471 498.378 190.466 498.686 190.444C498.811 190.545 498.972 190.551 499.168 190.46C499.322 191.143 499.477 191.785 499.633 192.387C499.822 192.973 499.94 193.533 499.986 194.067C500.031 194.165 500.052 194.254 500.049 194.335C500.001 194.317 499.816 194.303 499.494 194.292C497.885 194.236 496.254 194.09 494.602 193.855C492.966 193.653 491.349 193.323 489.754 192.865C488.191 192.391 486.682 191.774 485.225 191.015C483.784 190.288 482.422 189.386 481.137 188.31C480.964 188.191 480.745 188.014 480.479 187.779L479.202 188.363L475.765 180.846Z" fill="#C9A84C"/kinomsk-host-test/full/>
+<path d="M282.004 486.962C391.894 486.962 480.978 397.878 480.978 287.988C480.978 178.098 391.894 89.0145 282.004 89.0145C172.114 89.0145 83.0307 178.098 83.0307 287.988C83.0307 397.878 172.114 486.962 282.004 486.962Z" stroke="#C9A84C" stroke-width="7.48021"/kinomsk-host-test/full/>
+<path d="M165.188 463.712L163.996 465.642C164.486 467.385 164.785 469.198 164.89 471.083C165.045 472.957 165.046 474.841 164.891 476.735C164.757 478.599 164.492 480.467 164.097 482.34C163.752 484.2 163.34 485.999 162.861 487.734C163.567 487.07 164.392 486.352 165.334 485.579C166.296 484.777 167.288 483.992 168.311 483.228C169.383 482.45 170.443 481.729 171.488 481.063C172.535 480.397 173.511 479.878 174.418 479.507C175.754 478.851 176.99 478.323 178.125 477.923C179.31 477.513 180.591 477.119 181.967 476.741L183.16 474.81L190.237 479.182L170.368 511.355L163.291 506.984L178.987 481.566C178.77 481.644 178.543 481.737 178.307 481.845C178.071 481.953 177.834 482.061 177.599 482.17C177.146 482.355 176.707 482.551 176.285 482.755C175.893 482.978 175.476 483.208 175.035 483.443C174.73 483.593 174.416 483.759 174.092 483.94C173.8 484.141 173.5 484.316 173.196 484.466C172.972 484.624 172.732 484.772 172.477 484.911C172.271 485.039 172.057 485.181 171.832 485.339C170.3 486.381 168.834 487.487 167.435 488.655C166.086 489.811 164.842 490.969 163.703 492.128C162.564 493.287 161.543 494.392 160.64 495.443C159.787 496.482 159.089 497.406 158.548 498.213L158.519 498.26L158.15 498.858L154.979 496.898C155.024 496.757 155.141 496.533 155.33 496.227C156.121 494.81 156.87 493.22 157.578 491.457C158.305 489.662 158.916 487.817 159.409 485.92C159.953 484.013 160.366 482.109 160.65 480.211C160.983 478.3 161.151 476.52 161.154 474.871C161.197 474.39 161.216 473.915 161.209 473.445C161.203 472.975 161.181 472.496 161.144 472.008C161.135 471.748 161.126 471.489 161.117 471.229C161.108 470.97 161.083 470.7 161.044 470.422L145.347 495.839L138.269 491.469L158.11 459.34L165.188 463.712ZM235.674 496.591L224.64 532.76L188.471 521.727L199.505 485.558L235.674 496.591ZM230.482 499.356L206.248 491.964L198.856 516.197L193.663 518.962L217.897 526.355L225.289 502.121L230.482 499.356ZM246.592 500.433L284.307 502.275L283.693 514.847L275.384 514.441L275.795 506.024L254.698 504.994L253.583 527.817C256.481 528.283 259.052 528.805 261.295 529.383C263.54 529.926 265.494 530.509 267.159 531.13C268.825 531.717 270.256 532.309 271.452 532.909C272.649 533.508 273.63 534.097 274.395 534.675L274.769 527.013L283.079 527.419L282.462 540.045L274.153 539.639C274.017 539.452 273.64 539.073 273.018 538.502C272.435 537.897 271.386 537.215 269.873 536.455C268.397 535.662 266.328 534.84 263.665 533.988C261.039 533.139 257.615 532.359 253.396 531.648C252.146 531.407 250.84 531.199 249.478 531.024C248.118 530.813 246.667 530.634 245.123 530.487L246.592 500.433ZM304.133 501.7L307.988 521.202C308.066 520.673 308.167 520.157 308.288 519.656C308.402 519.12 308.534 518.58 308.684 518.036C308.819 517.422 308.976 516.822 309.153 516.236C309.325 515.615 309.495 514.994 309.666 514.373C310.263 512.566 311.002 510.823 311.881 509.144C312.761 507.465 313.775 505.906 314.922 504.468C316.105 503.022 317.45 501.747 318.957 500.642C320.457 499.501 322.132 498.601 323.984 497.941C324.189 497.864 324.398 497.804 324.61 497.762C324.85 497.678 325.073 497.597 325.278 497.52L333.068 495.981L335.383 507.692L327.222 509.305L325.661 501.409C325.492 501.479 325.336 501.529 325.195 501.556C325.053 501.584 324.898 501.633 324.728 501.704C322.381 502.645 320.393 504.011 318.765 505.801C317.136 507.591 315.797 509.636 314.746 511.937C315.513 513.584 316.456 515.289 317.575 517.049C318.722 518.768 319.997 520.389 321.398 521.91C322.801 523.432 324.319 524.802 325.955 526.02C327.591 527.239 329.298 528.168 331.077 528.808L330.145 524.091L338.306 522.478L340.401 533.077L338.917 533.37C337.723 533.459 336.554 533.489 335.41 533.458C334.266 533.427 333.097 533.272 331.904 532.994C330.288 532.616 328.704 532.03 327.151 531.236C325.635 530.434 324.186 529.509 322.804 528.46C321.45 527.37 320.171 526.191 318.966 524.925C317.789 523.615 316.736 522.281 315.807 520.923C315.265 520.222 314.761 519.533 314.297 518.854C313.861 518.133 313.421 517.393 312.977 516.636C312.941 516.827 312.884 517.004 312.807 517.166C312.729 517.328 312.672 517.505 312.636 517.696C311.901 521.034 311.36 524.427 311.014 527.873C310.695 531.277 310.797 534.671 311.319 538.055L311.465 538.797L303.305 540.41L295.972 503.313L304.133 501.7ZM344.31 494.296L378.39 477.911L383.376 488.281C379.092 490.341 375.494 492.291 372.582 494.13C369.655 495.937 367.277 497.599 365.449 499.118C363.606 500.603 362.224 501.967 361.302 503.21C360.398 504.403 359.794 505.433 359.491 506.298L366.7 521.294L385.785 512.118L382.649 505.594C378.808 507.081 375.327 508.235 372.206 509.056C369.116 509.862 366.371 510.303 363.97 510.379C363.535 510.387 363.124 510.405 362.737 510.432C362.335 510.426 361.956 510.388 361.603 510.317C361.931 509.92 362.359 509.395 362.884 508.743C363.41 508.09 363.944 507.374 364.487 506.593C365.713 506.483 367.102 506.295 368.652 506.03C370.22 505.715 371.974 505.251 373.917 504.637C375.892 504.007 378.071 503.219 380.453 502.274C382.868 501.312 385.52 500.137 388.408 498.749L394.776 511.991L360.695 528.376L344.31 494.296ZM357.6 501.992C359.034 499.904 361.154 497.747 363.959 495.518C366.781 493.243 370.296 490.954 374.503 488.651L372.607 484.707L353.522 493.883L357.455 502.062L357.6 501.992ZM394.795 479.429L389.582 472.946L419.095 449.217L442.747 478.722L436.264 483.934L431.491 477.998C431.194 480.732 430.062 483.606 428.095 486.621C426.157 489.611 423.197 492.914 419.219 496.53L419.76 497.204L413.276 502.416L400.075 485.997L403.654 483.12C406.359 480.852 408.675 478.76 410.599 476.842C412.523 474.926 414.136 473.167 415.437 471.567C416.738 469.966 417.764 468.54 418.515 467.29C419.293 466.017 419.85 464.9 420.185 463.937L415.176 457.706L398.672 470.975L401.278 474.216L394.795 479.429ZM416.849 493.582C419.318 491.366 421.333 489.331 422.891 487.476C424.456 485.572 425.636 483.792 426.43 482.136C427.253 480.458 427.721 478.857 427.836 477.332C427.928 475.78 427.736 474.248 427.26 472.736L422.826 467.221C421.695 469.608 419.958 472.16 417.613 474.877C415.269 477.594 412.34 480.503 408.827 483.605L416.849 493.582Z" fill="#C9A84C"/kinomsk-host-test/full/>
+<path d="M283.5 562.512C437.594 562.512 562.512 437.594 562.512 283.5C562.512 129.406 437.594 4.48814 283.5 4.48814C129.406 4.48814 4.48853 129.406 4.48853 283.5C4.48853 437.594 129.406 562.512 283.5 562.512Z" stroke="#C9A84C" stroke-width="8.97625"/kinomsk-host-test/full/>
+</g>
+<defs>
+<clipPath id="clip0_203_525">
+<rect width="567" height="567" fill="white"/kinomsk-host-test/full/>
+</clipPath>
+</defs>
+</svg>
+          <span style="font-size:0.6em;letter-spacing:3px;opacity:0.6;">КИНОСТУДИЯ МОСКВА</span>
+        </div>
+        <div class="footer-tagline">"Творим историю"</div>
+        <div class="footer-copy">© Первая AI киностудия полного цикла</div>
+        <div class="footer-copy" style="margin-top:8px;"><a href="#" onclick="parent.openPrivacy();return false;" style="color:rgba(255,255,255,0.65);text-decoration:underline;font-size:10px;letter-spacing:1px;">Политика конфиденциальности</a></div>
+      </div>
+    </div>
+  </footer><script>function fit(){if(window.parent!==window){window.parent.postMessage({kind:'kinostudio-footer-height',height:document.documentElement.scrollHeight},location.origin)}} new ResizeObserver(fit).observe(document.body);window.addEventListener('load',fit);window.addEventListener('resize',fit);if(document.fonts)document.fonts.ready.then(fit);</script></body></html>

@@ -1,0 +1,69 @@
+{
+  "assets": [
+    {
+      "contentType": "image/png",
+      "id": "ee6b46dc5688e449",
+      "kind": "image",
+      "name": "raw-04.png",
+      "path": "/kinomsk-host-test/full/var/folders/2c/35y81sd55dngs8q0x08_vl1r0000gn/T/browser-use/assets/b287e357-0b68-4fcf-9fca-305bb53a690a/ee6b46dc5688e449.png",
+      "url": "/kinomsk-host-test/full/case/kgmXskillout/assets/raw-04.png"
+    },
+    {
+      "contentType": "image/jpeg",
+      "id": "d4909a1b91f66d90",
+      "kind": "image",
+      "name": "raw-02.jpg",
+      "path": "/kinomsk-host-test/full/var/folders/2c/35y81sd55dngs8q0x08_vl1r0000gn/T/browser-use/assets/b287e357-0b68-4fcf-9fca-305bb53a690a/d4909a1b91f66d90.jpg",
+      "url": "/kinomsk-host-test/full/case/kgmXskillout/assets/raw-02.jpg"
+    },
+    {
+      "contentType": "image/png",
+      "id": "299a1b224257c564",
+      "kind": "image",
+      "name": "raw-10.png",
+      "path": "/kinomsk-host-test/full/var/folders/2c/35y81sd55dngs8q0x08_vl1r0000gn/T/browser-use/assets/b287e357-0b68-4fcf-9fca-305bb53a690a/299a1b224257c564.png",
+      "url": "/kinomsk-host-test/full/case/kgmXskillout/assets/raw-10.png"
+    },
+    {
+      "contentType": "image/png",
+      "id": "34259a72dbc5b05e",
+      "kind": "image",
+      "name": "raw-14.png",
+      "path": "/kinomsk-host-test/full/var/folders/2c/35y81sd55dngs8q0x08_vl1r0000gn/T/browser-use/assets/b287e357-0b68-4fcf-9fca-305bb53a690a/34259a72dbc5b05e.png",
+      "url": "/kinomsk-host-test/full/case/kgmXskillout/assets/raw-14.png"
+    },
+    {
+      "contentType": "image/png",
+      "id": "9cd4b9ec1ab71da6",
+      "kind": "image",
+      "name": "hero-watch-arrow.png",
+      "path": "/kinomsk-host-test/full/var/folders/2c/35y81sd55dngs8q0x08_vl1r0000gn/T/browser-use/assets/b287e357-0b68-4fcf-9fca-305bb53a690a/9cd4b9ec1ab71da6.png",
+      "url": "/kinomsk-host-test/full/case/kgmXskillout/assets/hero-watch-arrow.png"
+    },
+    {
+      "contentType": "image/png",
+      "id": "1f9ad724e67957c1",
+      "kind": "image",
+      "name": "result-watch-arrow.png",
+      "path": "/kinomsk-host-test/full/var/folders/2c/35y81sd55dngs8q0x08_vl1r0000gn/T/browser-use/assets/b287e357-0b68-4fcf-9fca-305bb53a690a/1f9ad724e67957c1.png",
+      "url": "/kinomsk-host-test/full/case/kgmXskillout/assets/result-watch-arrow.png"
+    },
+    {
+      "contentType": "application/octet-stream",
+      "id": "b4dce650ab496c2d",
+      "kind": "font",
+      "name": "Involve-Regular.ttf",
+      "path": "/kinomsk-host-test/full/var/folders/2c/35y81sd55dngs8q0x08_vl1r0000gn/T/browser-use/assets/b287e357-0b68-4fcf-9fca-305bb53a690a/b4dce650ab496c2d.ttf",
+      "url": "/kinomsk-host-test/full/case/kgmXskillout/assets/Involve-Regular.ttf"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "8791233aaa2bcea2",
+      "kind": "image",
+      "name": "raw-03-seo-960.webp",
+      "path": "/kinomsk-host-test/full/var/folders/2c/35y81sd55dngs8q0x08_vl1r0000gn/T/browser-use/assets/b287e357-0b68-4fcf-9fca-305bb53a690a/8791233aaa2bcea2.webp",
+      "url": "/kinomsk-host-test/full/case/kgmXskillout/assets/raw-03-seo-960.webp"
+    }
+  ],
+  "failures": []
+}
