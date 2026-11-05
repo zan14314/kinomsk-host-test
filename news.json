@@ -1,0 +1,65 @@
+[
+  {
+    "id": "seed-1",
+    "url": "https://dzen.ru/a/asU3G4q_jR1Sx8CV?share_to=link",
+    "image": "news-exhibitions.jpg",
+    "category": "Продажи",
+    "date": "2026-10-06",
+    "title": "Выставки без бюджета",
+    "description": "Как искать клиентов через отраслевые события, живое общение и быстрые гипотезы."
+  },
+  {
+    "id": "seed-2",
+    "url": "https://dzen.ru/a/aphVrYhpt1YsUTTJ?share_to=link",
+    "image": "news-contests.jpg",
+    "category": "Студия",
+    "date": "2026-09-02",
+    "title": "Креативные конкурсы",
+    "description": "Почему фестивали и хакатоны стали для нас способом строить партнёрства."
+  },
+  {
+    "id": "seed-3",
+    "url": "https://dzen.ru/a/aoagWBmZg3Mg4Qwk",
+    "image": "news-ai-reklama.jpg",
+    "category": "Право",
+    "date": "2026-08-20",
+    "title": "AI в рекламе",
+    "description": "Что бизнесу важно проверить перед коммерческим использованием нейросетевых изображений."
+  },
+  {
+    "id": "seed-4",
+    "url": "https://киностудия.москва/case/kgmXskillout/",
+    "image": "news-kgm-skillout.jpg",
+    "category": "Кейс",
+    "date": "2026-07-31",
+    "title": "KGM x Skillout",
+    "description": "Мы сделали рекламный ролик для KGM в нейросетях за 24 часа — и победили"
+  },
+  {
+    "id": "seed-5",
+    "url": "https://dzen.ru/a/akOcOqH1F0kmrwoz",
+    "image": "news-sharikopolis.jpg",
+    "category": "Кейс",
+    "date": "2026-07-07",
+    "title": "Шарикополис",
+    "description": "Как мы создавали AI-анимацию для «Чистой Линии» и собирали сладкий город."
+  },
+  {
+    "id": "seed-6",
+    "url": "https://moskvichmag.ru/lyudi/pochemu-vy-dolzhny-menya-znat-vypusknik-shkoly-sozdatel-ai-kinostudii-moskva-aleksandr-inozemtsev/",
+    "image": "news-alexander.jpg",
+    "category": "Люди",
+    "date": "2026-06-01",
+    "title": "Александр Иноземцев",
+    "description": "Материал «Москвича» об операционном директоре и создании AI-киностудии."
+  },
+  {
+    "id": "seed-7",
+    "url": "https://dzen.ru/b/akuxnPE0pTX9k5nc?share_to=link",
+    "image": "news-who-logo.png",
+    "category": "О студии",
+    "date": "2026-01-01",
+    "title": "Кто мы и что делаем",
+    "description": "Коротко о подходе Киностудии «Москва»: AI, реализм и кинематографичность."
+  }
+]
