@@ -8,7 +8,15 @@
     return element;
   }
   try {
-    const response = await fetch(new URL('news.json', document.baseURI), { cache: 'no-store' });
+    let response;
+    let liveNews = false;
+    try {
+      response = await fetch('https://test.filmstudio.moscow/news.json', { cache: 'no-store', signal: AbortSignal.timeout(8000) });
+      if (!response.ok) throw new Error('Live news unavailable');
+      liveNews = true;
+    } catch (_) {
+      response = await fetch(new URL('news.json', document.baseURI), { cache: 'no-store' });
+    }
     if (!response.ok) throw new Error('News response ' + response.status);
     const items = await response.json();
     if (!Array.isArray(items)) throw new Error('Invalid news data');
@@ -30,7 +38,7 @@
       photo.decoding = 'async';
       photo.width = 900;
       photo.height = 900;
-      const imageUrl = new URL(item.image, document.baseURI);
+      const imageUrl = new URL(item.image, liveNews && item.image.startsWith('news-media/') ? 'https://test.filmstudio.moscow/' : document.baseURI);
       imageUrl.searchParams.set('v', '20261008');
       photo.src = imageUrl.href;
       photo.style.cssText = 'display:block;width:100%;height:100%;object-fit:cover';
