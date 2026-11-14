@@ -1,5 +1,23 @@
 [
   {
+    "category": "Статья",
+    "title": "Реклама в играх и кино",
+    "description": "Скоро мы будем смотреть разные версии одного и того же фильма",
+    "date": "2026-11-02",
+    "url": "https://dzen.ru/a/auRsq_PXA2RbwPub?share_to=link",
+    "id": "68844abc5d5149358ad1800acd716bf0",
+    "image": "news-media/7810bb821a384d49ad640067f4c5048c.jpg"
+  },
+  {
+    "category": "События",
+    "title": "ИИ и дизайн видеоигр",
+    "description": "Выступление генерального директора киностудии \"Москва\" на Московской международной неделе видеоигр",
+    "date": "2026-11-01",
+    "url": "https://t.me/kinomskv/112",
+    "id": "564d20f040ed47edb8a8ca00c56db3d8",
+    "image": "news-media/6aedae272e0747618ea82a02ba62a8a7.jpg"
+  },
+  {
     "id": "seed-1",
     "url": "https://dzen.ru/a/asU3G4q_jR1Sx8CV?share_to=link",
     "image": "news-exhibitions.jpg",
